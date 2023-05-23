@@ -1,9 +1,9 @@
-package main
+package component
 
 import (
 	"testing"
 
-	"../component"
+	"github.com/Ragadozo/assessment1/src/component"
 )
 
 type romanConversionTest struct {
