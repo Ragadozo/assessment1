@@ -1,4 +1,4 @@
-package component
+package main
 
 func DecimalToRoman(decimal int) string {
 	// Implementation of DecimalToRoman converter
