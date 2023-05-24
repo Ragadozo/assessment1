@@ -24,7 +24,7 @@ func firstChoice() {
 	input := readFromConsole()
 	result, err := roman_converter.RomanToDecimal(input)
 	if err != nil {
-		fmt.Println(err.Error() + " Please enter a valid number.")
+		fmt.Println(err.Error())
 	} else {
 		fmt.Printf("The result: %d\n", result)
 	}
@@ -37,11 +37,11 @@ func secondChoice() {
 	input := readFromConsole()
 	number, err := strconv.Atoi(input)
 	if err != nil {
-		fmt.Println("Invalid input. Please enter a valid number.")
+		fmt.Println("Invalid input.")
 	} else {
 		result, err := roman_converter.DecimalToRoman(number)
 		if err != nil {
-			fmt.Println(err.Error() + " Please enter a valid number.")
+			fmt.Println(err.Error())
 		} else {
 			fmt.Printf("The result: %s\n", result)
 		}
@@ -66,7 +66,7 @@ func Run_program() {
 		case "2":
 			secondChoice()
 		default:
-			fmt.Println("Invalid choice. Please enter a valid option.")
+			fmt.Println("Invalid choice.")
 		}
 
 		fmt.Println("Press Enter to continue or type 'exit' to quit:")
