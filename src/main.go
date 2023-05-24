@@ -1,9 +1,9 @@
 package main
 
 import (
-	"fmt"
+	"github.com/Ragadozo/assessment1/src/console_controller"
 )
 
 func main() {
-	fmt.Println("Hello world!" + DecimalToRoman(10))
+	console_controller.Run_program()
 }
