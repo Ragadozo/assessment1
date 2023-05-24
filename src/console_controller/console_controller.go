@@ -53,8 +53,8 @@ func Run_program() {
 
 	for {
 		fmt.Println("Choose an option:")
-		fmt.Println("1. Write '1' to convert Decimal number to Roman")
-		fmt.Println("2. Write '2' to convert Roman number to Decimal")
+		fmt.Println("1. Write '1' to convert Roman number to Decimal")
+		fmt.Println("2. Write '2' to convert Decimal number to Roman")
 		fmt.Println("Enter your choice:")
 
 		choice := readFromConsole()
