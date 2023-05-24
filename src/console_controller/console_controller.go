@@ -19,29 +19,34 @@ func readFromConsole() string {
 }
 
 func firstChoice() {
-	fmt.Println("You selected option 1: 'one'")
+	fmt.Println("You selected option 1: ")
 	fmt.Println("Enter a Roman number:")
 	input := readFromConsole()
 	result, err := roman_converter.RomanToDecimal(input)
 	if err != nil {
 		fmt.Println(err.Error() + " Please enter a valid number.")
+	} else {
+		fmt.Printf("The result: %d\n", result)
 	}
-	fmt.Printf("The result: %d\n", result)
+
 }
 
 func secondChoice() {
-	fmt.Println("You selected option 2: 'two'")
+	fmt.Println("You selected option 2: ")
 	fmt.Println("Enter a Decimal number:")
 	input := readFromConsole()
 	number, err := strconv.Atoi(input)
 	if err != nil {
 		fmt.Println("Invalid input. Please enter a valid number.")
+	} else {
+		result, err := roman_converter.DecimalToRoman(number)
+		if err != nil {
+			fmt.Println(err.Error() + " Please enter a valid number.")
+		} else {
+			fmt.Printf("The result: %s\n", result)
+		}
 	}
-	result, err := roman_converter.DecimalToRoman(number)
-	if err != nil {
-		fmt.Println(err.Error() + " Please enter a valid number.")
-	}
-	fmt.Printf("The result: %s\n", result)
+
 }
 
 func Run_program() {
